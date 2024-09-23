@@ -1,0 +1,179 @@
+%implements "chartSource" "C"
+%function ChartConfig(block, system) void
+  %createrecord chartConfiguration { ...
+          executeAtInitialization  0 ...
+  }
+  %return chartConfiguration
+%endfunction
+%function ChartDataMap(block, system) void
+  %createrecord ChartDataElements {\
+    NumChartData   23 \
+    ChartDataDefaults {\
+      RecordType   "ChartData"\
+      Dimensions   []\
+      IsTestPoint  0\
+    }\
+    ChartData {\
+      Name         "is_Power_management"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "Power_and_error_management.Power_management"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_PowerUD_manager_on"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "Power_and_error_management.Power_management.PowerUD_manager_on"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_Button_up_down_management"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "Power_and_error_management.Button_up_down_management"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_Button_up_down_manager_on"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "Power_and_error_management.Button_up_down_management.Button_up_down_manager_on"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_Error_management"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "Power_and_error_management.Error_management"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_Error_manager_on"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "Power_and_error_management.Error_management.Error_manager_on"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "RELEASED"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "RELEASED"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "PRESSED"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "PRESSED"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "BUTTONDURATION"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "BUTTONDURATION"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "bup_second"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "bup_second"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "bdown_second"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "bdown_second"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "ACTIVE"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "ACTIVE"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "ERR_TIMER"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "ERR_TIMER"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "ON"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "ON"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "OFF"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "OFF"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "TIMER"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "TIMER"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "temp_power"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "temp_power"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "MAX_TIMING"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "MAX_TIMING"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "MIN_TIMING"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "MIN_TIMING"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_active_c2_ModelloTeam1Test"\
+      Description  "StateIsActive"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "temporalCounter_i1"\
+      Description  "TemporalCounter"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "temporalCounter_i2"\
+      Description  "TemporalCounter"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "temporalCounter_i3"\
+      Description  "TemporalCounter"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  ""\
+    }\
+  }
+  %return ChartDataElements
+%endfunction

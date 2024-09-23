@@ -1,0 +1,67 @@
+%implements "chartSource" "C"
+%function ChartConfig(block, system) void
+  %createrecord chartConfiguration { ...
+          executeAtInitialization  0 ...
+  }
+  %return chartConfiguration
+%endfunction
+%function ChartDataMap(block, system) void
+  %createrecord ChartDataElements {\
+    NumChartData   7 \
+    ChartDataDefaults {\
+      RecordType   "ChartData"\
+      Dimensions   []\
+      IsTestPoint  0\
+    }\
+    ChartData {\
+      Name         "is_Stove_management"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "Stove_management"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_Blinking_stove"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "Stove_management.Blinking_stove"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "ON"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "ON"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "OFF"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "OFF"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "MAX_TIMING"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "MAX_TIMING"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_active_c1_ModelloTeam1Test"\
+      Description  "StateIsActive"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "temporalCounter_i1"\
+      Description  "TemporalCounter"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  ""\
+    }\
+  }
+  %return ChartDataElements
+%endfunction

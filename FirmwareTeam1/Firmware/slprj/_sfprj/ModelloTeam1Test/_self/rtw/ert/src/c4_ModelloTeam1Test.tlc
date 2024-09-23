@@ -1,0 +1,88 @@
+%implements "chartSource" "C"
+%function ChartConfig(block, system) void
+  %createrecord chartConfiguration { ...
+          executeAtInitialization  0 ...
+  }
+  %return chartConfiguration
+%endfunction
+%function ChartDataMap(block, system) void
+  %createrecord ChartDataElements {\
+    NumChartData   10 \
+    ChartDataDefaults {\
+      RecordType   "ChartData"\
+      Dimensions   []\
+      IsTestPoint  0\
+    }\
+    ChartData {\
+      Name         "is_PowerOFF_management"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "PowerOFF_management"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_PowerOFF_manager_on"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "PowerOFF_management.PowerOFF_manager_on"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "RELEASED"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "RELEASED"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "PRESSED"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "PRESSED"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "bonoff_second"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "bonoff_second"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "ON"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "ON"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "OFF"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "OFF"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "BUTTONDURATION"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "BUTTONDURATION"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_active_c4_ModelloTeam1Test"\
+      Description  "StateIsActive"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "temporalCounter_i1"\
+      Description  "TemporalCounter"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  ""\
+    }\
+  }
+  %return ChartDataElements
+%endfunction
