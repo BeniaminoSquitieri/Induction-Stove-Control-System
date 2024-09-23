@@ -65,13 +65,112 @@ Before building and running the firmware, ensure you have the following:
   - Soldered buttons for ON/OFF, increase, and decrease operations.
   - Proximity sensor or pressure sensor to detect the presence of a pot.
 
-### Building the Firmware
+### Clone repository
 
 1. Clone the repository:
    ```bash
    git clone https://github.com/[YourRepository]/embedded-stove-control.git
 
+### Building the Firmware
 
+1. Open the project in **STM32CubeIDE** (or your preferred IDE).
+   
+2. Ensure that all required libraries (HAL, drivers, etc.) are properly linked.
+
+3. Build the project:
+   - In **STM32CubeIDE**, go to `Project > Build All` or use the appropriate build command in your IDE.
+
+4. Connect your development board to the computer using a JTAG/SWD programmer.
+
+### Flashing the Firmware
+
+1. Flash the firmware:
+   - In **STM32CubeIDE**, go to `Run > Debug` to flash the firmware onto your microcontroller.
+
+---
+
+## Running the Firmware
+
+Once the firmware is flashed:
+
+1. Power on the embedded system.
+2. The device will remain idle until the ON/OFF button is pressed.
+3. Press the ON/OFF button to turn on the stove.
+4. Use the `Increase` and `Decrease` buttons to adjust the power level.
+5. Place a pot on the stove to activate heating. The power level will be indicated by the blinking frequency of the LED.
+6. If the pot is removed, the error LED will blink, and the stove will stop after 10 seconds unless the pot is replaced.
+
+---
+
+## Usage
+
+### Controls
+
+- **Power ON/OFF**: Press the ON/OFF button to turn the stove on. Hold it for 1 second to turn it off.
+- **Adjust Power**:
+  - Press the `Increase` button to raise the power (300W, 500W, 1000W, 1500W).
+  - Press the `Decrease` button to lower the power.
+- **Error Handling**: If the pot is removed during operation, the error LED will blink, and the stove will stop heating after 10 seconds.
+
+### LED Indicators
+
+- **Power LED**:
+  - 300W: Blinks every 2 seconds.
+  - 500W: Blinks every 1 second.
+  - 1000W: Blinks every 0.5 seconds.
+  - 1500W: Blinks every 0.25 seconds.
+- **Error LED**: Blinks when the pot is removed during operation.
+
+---
+
+## Testing
+
+### Unit Testing
+
+Unit tests were performed on the Stateflow model to verify the system’s behavior under various conditions, including:
+
+- Powering on and off the device.
+- Adjusting power levels while the pot is on the stove.
+- Simulating error states such as pot removal during operation.
+
+### Integration Testing
+
+The firmware was also tested on physical hardware to verify the system's performance in real-world scenarios.
+
+To replicate the tests:
+
+1. Load the test cases defined in `test_cases/` (if provided).
+2. Run the test suite using MATLAB/Stateflow to verify the state machine behavior.
+3. Verify the results using the coverage report generated.
+
+---
+
+## Future Improvements
+
+Potential improvements to the system include:
+
+- **Temperature Sensor Integration**: To adjust power levels based on pot temperature.
+- **Overheat Protection**: Automatic shutdown if internal components overheat.
+- **Wireless Control**: Remote control via a mobile app or web interface.
+- **LCD Display**: Displaying the current power level and error messages.
+
+---
+
+## Troubleshooting
+
+### Common Issues
+
+- **Stove does not turn on**:
+  - Ensure that the power supply is properly connected.
+  - Check the button connections for proper contact.
+
+- **LED is not blinking**:
+  - Verify that the LED pins are correctly configured in the firmware.
+  - Check the LED connections.
+
+- **Error LED blinks continuously**:
+  - Ensure that the pot is correctly placed on the stove.
+  - Check the proximity sensor for any malfunction.
    
 
 
