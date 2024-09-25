@@ -1,5 +1,4 @@
-# SistemEmbeddedProject
-# Embedded Systems Project - Induction Stove Control System
+# Induction Stove Control System
 
 ## Project Overview
 This project was developed as part of the **Embedded Systems** course at the University of Salerno, Department of Information Engineering, Electrical Engineering, and Applied Mathematics. The goal is to design and implement firmware for controlling an induction stove. The system is equipped with power management capabilities, error handling, and user interaction through buttons for power adjustment and a sensor to detect the presence of a cooking pot.
